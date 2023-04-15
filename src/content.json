@@ -1,0 +1,41 @@
+{
+  "en": {
+    "about.me": {
+      "title": "About Me",
+      "description":
+      [
+        "<p>I am a Full Stack developer specialized in Machine Learning. I love developing web applications and Artificial Intelligence solutions. I am passionate about working on challenging projects and always looking to learn something new.</p>",
+        "<p>As an Informatics professor, I am enthusiastic and aim to give a practical approach to my classes.</p>",
+        "<p>But I also have a life outside programming. I am a running enthusiast and love cooking. Additionally, I am an amateur gardener and enjoy growing my own organic plants.</p>"
+      ]
+    },
+    "interestsList": [
+      "Machine Learning",
+      "Web Development",
+      "Artificial Intelligence",
+      "Running",
+      "Cooking",
+      "Gardening",
+      "Teaching"
+    ]
+  },
+  "es": {
+    "about.me": {
+      "title": "Sobre mí",
+      "description":
+      [
+      "<p>Soy un desarrollador Full Stack especializado en Machine Learning. Me encanta desarrollar aplicaciones web y soluciones de inteligencia artificial. Me apasiona trabajar en proyectos desafiantes y siempre estoy buscando aprender algo nuevo.</p>",
+      "<p>Como profesor de informática, soy muy apasionado y busco dar un enfoque práctico a mis clases.</p>",
+      "<p>Pero también tengo una vida fuera de la programación. Soy un apasionado del running y me encanta cocinar. Además, soy un jardinero aficionado y disfruto cultivando mis propias plantas orgánicas.</p>"
+      ]
+    },
+    "interestsList": [
+      "Desarrollo web",
+      "Inteligencia artificial",
+      "Aprendizaje automático",
+      "Minería de datos",
+      "Programación funcional",
+      "Enseñanza de informática"
+    ]
+  }
+}
