@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #23252C;
+  color: #eee;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+
+.profilePic {
+  border-radius: .5rem .5rem 0 0;
+  margin-bottom: -0.25rem;
+}
+
+
+.header-body, .info-body, .interests-body {
+  background-color: #1a1b21;
+}
+
+.header-body {
+  padding-block: 1rem;
+}
+
+.header-body > * {
+  margin-block: 0.25rem;
+}
+
+.footer-body {
+  background-color: #161619;
+  border-radius: 0 0 .5rem .5rem;
+}
+
+.personal-title {
+  color: #f3bf99;
+}
+
+.info-btns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0.5rem;
+  color: #918E9B;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  color: #eee;
+}
+
+.info-btn {
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  padding: .4rem .8rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.info-btn > i {
+  padding-right: .5rem;
+}
+
+.btn-email {
+  color: #333;
+  background-color: #eee;
+  border: 1px solid #eee;
+}
+
+.btn-email:link {
+  color: #333;
+}
+
+.btn-email:visited {
+  color: #333;
+}
+
+.btn-email:focus {
+  border: 1px dotted #eee;
+}
+
+.btn-email:hover {
+  color: #eee;
+  background-color: #444;
+  border: 1px solid #aaa;
+}
+
+.btn-email:active {
+  box-shadow: 1px 1px 4px #fff;
+}
+
+.btn-linkedin {
+  color: var(--color-primary-050);
+  background-color: #5093e2;
+  border: 1px solid #5093e2;
+}
+
+.btn-linkedin:link {
+
+}
+
+.btn-linkedin:visited {
+
+}
+
+.btn-linkedin:focus {
+
+}
+
+.btn-linkedin:hover {
+  color: #5093e2;
+  background-color: #eee;
+}
+
+.btn-linkedin:active {
+  box-shadow: 1px 1px 4px #fff;
+}
+
+.btn-whatsapp {
+  font-size: 1.4rem;
+  color: #00E676;
+}
+
+.btn-whatsapp:link {
+
+}
+
+.btn-whatsapp:visited {
+
+}
+
+.btn-whatsapp:focus {
+
+}
+
+.btn-whatsapp:hover {
+  color: #eee;
+  text-shadow: 1px 1px 4px #00e676;
+}
+
+.btn-whatsapp:active {
+  text-shadow: 1px 1px 4px #eee;
+  color: #00e676;
+}
+
+.link-website {
+  color: #eee;
+}
+
+.insterest-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+}
+
+.insterest-items > li::after{
+  content: '.';
+  margin-right: .4rem;
+}
+
+/*******************************************************************************************************
+ * media queries
+*******************************************************************************************************/
