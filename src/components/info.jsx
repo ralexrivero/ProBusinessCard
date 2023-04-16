@@ -7,7 +7,7 @@ const Info = () => {
       <div className="header-body f-wcc">
         <h1>Ronald Rivero</h1>
         <span className="txt-c personal-title">FullStack & Machine Learning Developer</span>
-        <small><a href="https://ralexrivero.github.io/" target="_blank" className="link link-website">ralex.io</a></small>
+        <small><a href="https://ralexrivero.github.io/" target="_blank" className="link link-website">ralex.me</a></small>
         <div className="f-rsec">
         <a href="mailto:ralexrivero@gmail.com" className="info-btn btn-email" target="_blank"><i className="bi bi-envelope"></i>email</a>
         <a href="https://www.linkedin.com/in/ronald-rivero/" className="info-btn btn-linkedin" target="_blank"><i className="bi bi-linkedin"></i>linkedin</a>
