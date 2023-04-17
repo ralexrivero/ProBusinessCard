@@ -12,8 +12,11 @@
   },
   "dependencies": {
     "bootstrap-icons": "^1.10.4",
+    "i18next": "^22.4.14",
+    "i18next-http-backend": "^2.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
