@@ -1,8 +1,14 @@
+import { useTranslation } from 'react-i18next';
+
+
 const About = () => {
+  const [t, i18n] = useTranslation('global');
+
+
   return (
     <main className="row info-body pl-sm pr-sm">
-      <h2 className="pb-xs">About</h2>
-      <p className="pb-xs">I'm a Full Stack developer with a passion for Machine Learning and web development. When I'm not coding, you can find me running, cooking up a storm, or tending to my organic garden. As an Informatics professor, I love sharing my knowledge and practical approach with students.</p>
+      <h2 className="pb-xs">{t('about.title')}</h2>
+      <p className="pb-xs">{t('about.description')}</p>
     </main>
   )
 }

@@ -1,0 +1,26 @@
+{
+  "info": {
+    "altProfilePhoto": "Foto de Perfil",
+    "name": "Ronald Rivero",
+    "title": "Desarrollador Full Stack y Machine Learning",
+    "website": "ralex.me",
+    "email": "Correo",
+    "linkedin": "LinkedIn",
+    "whatsapp": "Chat en WhatsApp"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Soy un desarrollador Full Stack con pasión por el Aprendizaje Automático y el desarrollo web. Cuando no estoy codificando, puedes encontrarme corriendo, cocinando o cuidando mi jardín orgánico. Como profesor de Informática, me encanta compartir mi conocimiento y enfoque práctico con los estudiantes."
+  },
+  "interests": {
+    "title": "Intereses",
+    "list": [
+      "Inteligencia Artificial",
+      "Desarrollo Web",
+      "Enseñanza",
+      "Machine Learning",
+      "Correr",
+      "Huerta orgánica"
+    ]
+  }
+}
