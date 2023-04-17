@@ -176,5 +176,74 @@ body {
 }
 
 /*******************************************************************************************************
- * media queries
+ * lang and theme
 *******************************************************************************************************/
+
+.header-nav {
+  position: relative;
+}
+
+.lang, .theme {
+  margin: .5rem;
+}
+
+.lang {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+
+.lang-main-btn {
+  cursor: pointer;
+}
+
+.lang-btn {
+  border: 1px solid rgba(255, 255, 255, .9);
+  border-radius: .25rem;
+  background-color: var(--color-primary-500);
+  color: var(--color-primary-050);
+  padding: .25rem;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+
+.lang-btn-active {
+  background-color: #1A1B21;
+}
+
+.bi-translate {
+  color: #1A1B21;
+}
+
+.lang:hover > .lang-group {
+  display: visible;
+}
+
+.theme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 1rem;
+}
+
+.theme-btn {
+  font-size: .75rem;
+  padding: .25rem;
+  margin: .25rem;
+  border: 1px solid rgba(255, 255, 255, .9);
+  color: var(--color-primary-800);
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, .9);
+  cursor: pointer;
+  border-radius: .25rem;
+  transition: all .25s ease-in-out;
+}
+
+.theme-btn-active {
+  background-color: var(--color-primary-800);
+  color: #fff;
+}
+
+.theme-btn:hover, .lang-btn:hover {
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, .6);
+}
