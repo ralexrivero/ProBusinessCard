@@ -1,8 +1,8 @@
 const Theme = () => {
   return (
-    <div>
-      <i class="bi bi-brightness-high"></i>
-      <i class="bi bi-moon"></i>
+    <div className="theme">
+      <i className="theme-btn bi bi-brightness-high "></i>
+      <i className="theme-btn bi bi-moon theme-btn-active"></i>
     </div>
   );
 }
