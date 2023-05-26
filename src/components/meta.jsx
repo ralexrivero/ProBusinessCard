@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
-import og_fb_profile from 'https://ralex.works/ProBusinessCard/img/og_fb_profile.jpg';
-import og_tw_profile from 'https://ralex.works/ProBusinessCard//img/og_tw_profile.jpg';
+import og_fb_profile from 'https://ralexrivero.github.io/ProBusinessCard/img/og_fb_profile.jpg';
+import og_tw_profile from 'https://ralexrivero.github.io/ProBusinessCard/img/og_tw_profile.jpg';
 
 
 const Meta = () => {
