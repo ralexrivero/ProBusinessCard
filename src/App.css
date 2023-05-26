@@ -1,5 +1,5 @@
 /***********************************************************
-  general
+  General
 ***********************************************************/
 * {
   margin: 0;
@@ -12,7 +12,7 @@ body {
 }
 
 /***********************************************************
-  light-mode
+  Light Mode
 ***********************************************************/
 .body {
   background-color: #F5F5F5;
@@ -26,9 +26,8 @@ body {
 }
 
 /***********************************************************
-  common
+  Common Styles
 ***********************************************************/
-
 .img-responsive {
   max-width: 100%;
 }
@@ -96,12 +95,9 @@ body {
   border: 1px solid #555;
 }
 
-.btn-email:link {
-  color: #333;
-}
-
+.btn-email:link,
 .btn-email:visited {
-  color: #eee;
+  color: #333;
 }
 
 .btn-email:focus {
@@ -126,11 +122,9 @@ body {
 }
 
 .btn-linkedin:visited {
-
 }
 
 .btn-linkedin:focus {
-
 }
 
 .btn-linkedin:hover {
@@ -147,16 +141,11 @@ body {
   color: #00E676;
 }
 
-.btn-whatsapp:link {
-
-}
-
+.btn-whatsapp:link,
 .btn-whatsapp:visited {
-
 }
 
 .btn-whatsapp:focus {
-
 }
 
 .btn-whatsapp:hover {
@@ -186,14 +175,15 @@ body {
 }
 
 /*******************************************************************************************************
- * lang and theme buttons
+ * Lang and Theme Buttons
 *******************************************************************************************************/
 
 .header-nav {
   position: relative;
 }
 
-.lang, .theme {
+.lang,
+.theme {
   margin: .5rem;
 }
 
@@ -201,7 +191,6 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-
 }
 
 .lang-main-btn {
@@ -254,12 +243,13 @@ body {
   color: #fff;
 }
 
-.theme-btn:hover, .lang-btn:hover {
+.theme-btn:hover,
+.lang-btn:hover {
   box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, .6);
 }
 
 /***********************************************************
-  dark-mode
+  Dark Mode
 ***********************************************************/
 
 .dark-theme {
@@ -296,10 +286,7 @@ body {
   border: 1px solid #eee;
 }
 
-.dark-theme .btn-email:link {
-  color: #333;
-}
-
+.dark-theme .btn-email:link,
 .dark-theme .btn-email:visited {
   color: #333;
 }
@@ -324,16 +311,11 @@ body {
   border: 1px solid #5093e2;
 }
 
-.dark-theme .btn-linkedin:link {
-
-}
-
+.dark-theme .btn-linkedin:link,
 .dark-theme .btn-linkedin:visited {
-
 }
 
 .dark-theme .btn-linkedin:focus {
-
 }
 
 .dark-theme .btn-linkedin:hover {
@@ -350,16 +332,11 @@ body {
   color: #00E676;
 }
 
-.dark-theme .btn-whatsapp:link {
-
-}
-
+.dark-theme .btn-whatsapp:link,
 .dark-theme .btn-whatsapp:visited {
-
 }
 
 .dark-theme .btn-whatsapp:focus {
-
 }
 
 .dark-theme .btn-whatsapp:hover {
