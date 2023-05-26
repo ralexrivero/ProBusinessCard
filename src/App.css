@@ -1,3 +1,6 @@
+/***********************************************************
+  general
+***********************************************************/
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +9,25 @@
 
 body {
   min-height: 100vh;
-  background-color: #23252C;
-  color: #eee;
 }
+
+/***********************************************************
+  light-mode
+***********************************************************/
+.body {
+  background-color: #F5F5F5;
+  color: #333;
+}
+
+.header-body,
+.info-body,
+.interests-body {
+  background-color: #EEEEEE;
+}
+
+/***********************************************************
+  common
+***********************************************************/
 
 .img-responsive {
   max-width: 100%;
@@ -17,11 +36,6 @@ body {
 .profilePic {
   border-radius: .5rem .5rem 0 0;
   margin-bottom: -0.25rem;
-}
-
-
-.header-body, .info-body, .interests-body {
-  background-color: #1a1b21;
 }
 
 .header-body {
@@ -33,12 +47,12 @@ body {
 }
 
 .footer-body {
-  background-color: #161619;
+  background-color: #E0E0E0;
   border-radius: 0 0 .5rem .5rem;
 }
 
 .personal-title {
-  color: #f3bf99;
+  color: #4a86d4;
 }
 
 .info-btns {
@@ -53,12 +67,12 @@ body {
   width: 1.5rem;
   height: 1.5rem;
   margin: 0 0.5rem;
-  color: #918E9B;
+  color: #56535f;
   transition: all 0.2s ease-in-out;
 }
 
 .social-icon:hover {
-  color: #eee;
+  color: #373540;
 }
 
 .info-btn {
@@ -77,9 +91,9 @@ body {
 }
 
 .btn-email {
-  color: #333;
+  color: #555;
   background-color: #eee;
-  border: 1px solid #eee;
+  border: 1px solid #555;
 }
 
 .btn-email:link {
@@ -87,7 +101,7 @@ body {
 }
 
 .btn-email:visited {
-  color: #333;
+  color: #eee;
 }
 
 .btn-email:focus {
@@ -95,23 +109,20 @@ body {
 }
 
 .btn-email:hover {
-  color: #eee;
-  background-color: #444;
-  border: 1px solid #aaa;
+  color: #fafafa;
+  background-color: #555;
+  border: 1px solid #555;
 }
 
 .btn-email:active {
-  box-shadow: 1px 1px 4px #fff;
+  box-shadow: 1px 1px 4px #555;
 }
 
-.btn-linkedin {
-  color: var(--color-primary-050);
-  background-color: #5093e2;
-  border: 1px solid #5093e2;
-}
-
+.btn-linkedin,
 .btn-linkedin:link {
-
+  color: #5093e2;
+  background-color: #eee;
+  border: 1px solid #5093e2;
 }
 
 .btn-linkedin:visited {
@@ -123,12 +134,12 @@ body {
 }
 
 .btn-linkedin:hover {
-  color: #5093e2;
-  background-color: #eee;
+  color: #eee;
+  background-color: #5093e2;
 }
 
 .btn-linkedin:active {
-  box-shadow: 1px 1px 4px #fff;
+  box-shadow: 1px 1px 4px #555;
 }
 
 .btn-whatsapp {
@@ -149,13 +160,12 @@ body {
 }
 
 .btn-whatsapp:hover {
-  color: #eee;
-  text-shadow: 1px 1px 4px #00e676;
+  color: #e1fbe8;
+  text-shadow: 1px 1px 4px #00c32b, 1px 1px 4px #555;
 }
 
 .btn-whatsapp:active {
-  text-shadow: 1px 1px 4px #eee;
-  color: #00e676;
+  text-shadow: 1px 1px 4px #555;
 }
 
 .link-website {
@@ -246,4 +256,118 @@ body {
 
 .theme-btn:hover, .lang-btn:hover {
   box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, .6);
+}
+
+/***********************************************************
+  dark-mode
+***********************************************************/
+
+.dark-theme {
+  background-color: #23252C;
+  color: #eee;
+}
+
+.dark-theme .header-body,
+.dark-theme .info-body,
+.dark-theme .interests-body {
+  background-color: #1a1b21;
+}
+
+.dark-theme .footer-body {
+  background-color: #161619;
+  border-radius: 0 0 .5rem .5rem;
+}
+
+.dark-theme .personal-title {
+  color: #f3bf99;
+}
+
+.dark-theme .social-icon {
+  color: #918E9B;
+}
+
+.dark-theme .social-icon:hover {
+  color: #eee;
+}
+
+.dark-theme .btn-email {
+  color: #333;
+  background-color: #eee;
+  border: 1px solid #eee;
+}
+
+.dark-theme .btn-email:link {
+  color: #333;
+}
+
+.dark-theme .btn-email:visited {
+  color: #333;
+}
+
+.dark-theme .btn-email:focus {
+  border: 1px dotted #eee;
+}
+
+.dark-theme .btn-email:hover {
+  color: #eee;
+  background-color: #444;
+  border: 1px solid #aaa;
+}
+
+.dark-theme .btn-email:active {
+  box-shadow: 1px 1px 4px #fff;
+}
+
+.dark-theme .btn-linkedin {
+  color: var(--color-primary-050);
+  background-color: #5093e2;
+  border: 1px solid #5093e2;
+}
+
+.dark-theme .btn-linkedin:link {
+
+}
+
+.dark-theme .btn-linkedin:visited {
+
+}
+
+.dark-theme .btn-linkedin:focus {
+
+}
+
+.dark-theme .btn-linkedin:hover {
+  color: #5093e2;
+  background-color: #eee;
+}
+
+.dark-theme .btn-linkedin:active {
+  box-shadow: 1px 1px 4px #fff;
+}
+
+.dark-theme .btn-whatsapp {
+  font-size: 1.4rem;
+  color: #00E676;
+}
+
+.dark-theme .btn-whatsapp:link {
+
+}
+
+.dark-theme .btn-whatsapp:visited {
+
+}
+
+.dark-theme .btn-whatsapp:focus {
+
+}
+
+.dark-theme .btn-whatsapp:hover {
+  color: #eee;
+  text-shadow: 1px 1px 4px #00e676;
+}
+
+.dark-theme .btn-whatsapp:active {
+  text-shadow: 1px 1px 4px #eee;
+  color: #00e676;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Theme = () => {
-  const [lightMode, setLightMode] = useState(false);
+  const [lightMode, setLightMode] = useState(true);
 
   const themeToggler = () => {
     setLightMode(!lightMode);
@@ -10,6 +10,7 @@ const Theme = () => {
   useEffect(() => {
     const body = document.querySelector('body');
     body.classList.toggle('dark-theme', !lightMode);
+    body.classList.toggle('light-theme', lightMode);
   }, [lightMode]);
 
   return (
@@ -21,4 +22,3 @@ const Theme = () => {
 }
 
 export default Theme;
-
