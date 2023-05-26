@@ -11,7 +11,7 @@ const Info = () => {
     <header>
       <div className="header-nav">
         <Lang />
-{/*         <Theme /> */}
+        <Theme />
         <img className="img-responsive profilePic" src={profilePic} alt={t('info.altProfilePhoto')} />
       </div>
       <div className="header-body f-wcc">
