@@ -4,7 +4,7 @@ import '../src/aquarius.css';
 import App from './App'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { I18nextProvider } from 'react-i18next';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 import i18next from './components/i18n';
