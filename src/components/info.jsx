@@ -17,7 +17,7 @@ const Info = () => {
       <div className="header-body f-wcc">
         <h1>{t('info.name')}</h1>
         <span className="txt-c personal-title">{t('info.title')}</span>
-        <small><a href="https://ralexrivero.github.io/" target="_blank" className="link link-website">{t('info.website')}</a></small>
+        <small><a href="https://ralex.works/" target="_blank" className="link link-website">{t('info.website')}</a></small>
         <div className="f-rsec">
         <a href="mailto:ralexrivero@gmail.com" className="info-btn btn-email"><i className="bi bi-envelope"></i>{t('info.email')}</a>
         <a href="https://www.linkedin.com/in/ronald-rivero/" className="info-btn btn-linkedin" target="_blank"><i className="bi bi-linkedin"></i>{t('info.linkedin')}</a>
