@@ -10,7 +10,7 @@
   },
   "about": {
     "title": "Sobre mí",
-    "description": "Soy un desarrollador Full Stack con pasión por el Aprendizaje Automático y el desarrollo web. Cuando no estoy codificando, puedes encontrarme corriendo, cocinando o cuidando mi jardín orgánico. Como profesor de Informática, me encanta compartir mi conocimiento y enfoque práctico con los estudiantes."
+    "description": "Soy un desarrollador Full Stack con una pasión especial por la Inteligencia Artificial y el desarrollo de aplicaciones web. Cuando no estoy escribiendo código, disfruto salir a correr, bailar o jugar videojuegos. Como profesor de Informática, me encanta compartir mi conocimiento y experiencias con mis estudiantes, inspirando a la próxima generación de innovadores tecnológicos."
   },
   "interests": {
     "title": "Intereses",
@@ -18,9 +18,9 @@
       "Inteligencia Artificial",
       "Desarrollo Web",
       "Enseñanza",
-      "Machine Learning",
-      "Correr",
-      "Huerta orgánica"
+      "Python",
+      "Videojuegos",
+      "Correr"
     ]
   }
 }
