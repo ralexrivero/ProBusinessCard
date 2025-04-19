@@ -1,0 +1,19 @@
+{
+    "name": "Ronald Rivero – Personal Business Card",
+    "short_name": "R. Rivero",
+    "description": "Tarjeta de presentación personal de Ronald Rivero: Desarrollador Full Stack y experto en Machine Learning.",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#F5F5F5",
+    "theme_color": "#4a86d4",
+    "icons": [
+      {
+        "src": "/ProBusinessCard/favicon_n_b.svg",
+        "sizes": "any",
+        "type": "image/svg+xml",
+        "purpose": "maskable any"
+      }
+    ]
+  }

@@ -1,0 +1,26 @@
+{
+  "info": {
+    "altProfilePhoto": "Foto de Perfil",
+    "name": "Ronald Rivero",
+    "title": "Desarrollador FullStack y Cloud Developer AWS - GenAI",
+    "website": "ralex.works",
+    "email": "Correo",
+    "linkedin": "LinkedIn",
+    "whatsapp": "Chat en WhatsApp"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Soy Desarrollador FullStack y Cloud Developer AWS, apasionado por Linux. Mi stack se basa principalmente en Python — C y JavaScript para crear APIs REST de alto desempeño y aplicaciones web (SPA / PWA). Integro Inteligencia Artificial Generativa para automatizar análisis y diseñar experiencias personalizadas. La curiosidad me impulsa a investigar las tecnologías de vanguardia open‑source. Como docente y mentor de programación, IA y placas de desarrollo, disfruto transformar conceptos complejos en conocimiento accesible, impulsando a la próxima generación a construir sistemas robustos y escalables."
+  },
+  "interests": {
+    "title": "Intereses",
+    "list": [
+      "IA Generativa",
+      "Desarrollo Cloud",
+      "Desarrollo Web",
+      "Investigación en IA",
+      "Enseñanza",
+      "Python"
+    ]
+  }
+}
