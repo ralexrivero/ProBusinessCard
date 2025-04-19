@@ -3,25 +3,31 @@ import React, { useState, useEffect } from 'react';
 const Theme = () => {
   const [theme, setTheme] = useState('light');
 
-  const lightMode = () => {
-    setTheme('light');
-  }
+  const setLight = () => setTheme('light');
+  const setDark  = () => setTheme('dark');
 
-  const darkMode = () => {
-    setTheme('dark')
-  }
   useEffect(() => {
-    const body = document.querySelector('body');
-    body.classList.toggle('dark-theme', theme === 'dark');
-    body.classList.toggle('light-theme', theme === 'light');
-  }, [lightMode]);
+    document.body.dataset.theme = theme;
+  }, [theme]);
 
   return (
     <div className="theme">
-      <i onClick={lightMode} className="theme-btn bi bi-brightness-high"></i>
-      <i onClick={darkMode} className="theme-btn bi bi-moon"></i>
+      <i
+        onClick={setLight}
+        className={`theme-btn bi bi-brightness-high ${
+          theme === 'light' ? 'theme-btn-active' : ''
+        }`}
+        aria-label="Activar modo claro"
+      ></i>
+      <i
+        onClick={setDark}
+        className={`theme-btn bi bi-moon ${
+          theme === 'dark' ? 'theme-btn-active' : ''
+        }`}
+        aria-label="Activar modo oscuro"
+      ></i>
     </div>
   );
-}
+};
 
 export default Theme;
