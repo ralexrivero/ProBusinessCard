@@ -5,9 +5,9 @@ import og_fb_profile from '../../img/og_fb_profile.jpg';
 import og_tw_profile from '../../img/og_tw_profile.jpg';
 
 const Meta = () => {
-  const siteUrl = 'https://ralex.works/ProBusinessCard/';
-  const title = 'Ronald Rivero – Full Stack & Machine Learning Developer';
-  const description = '¡Hola! Soy Ronald Rivero, desarrollador Full Stack y apasionado profesor de programación. Creo soluciones innovadoras y comparto mi conocimiento con estudiantes.';
+  const siteUrl = 'https://ralex.works/probusinesscard/';
+  const title = 'Ronald Rivero - Full Stack & Machine Learning Developer';
+  const description = '¡Hola! Soy Ronald Rivero, desarrollador Full Stack, AWS Developer, Gen AI y profesor de programación. Creo soluciones innovadoras y comparto mi conocimiento.';
   const image = og_fb_profile;
 
   const jsonLd = {
