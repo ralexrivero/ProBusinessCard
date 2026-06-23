@@ -1,3 +1,5 @@
+import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+
 const Footer = () => {
   return (
     <footer className="footer-body">
@@ -7,11 +9,11 @@ const Footer = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/ronald-rivero/"
+              href="https://github.com/ralexrivero"
               className="social-icon"
-              aria-label="LinkedIn"
+              aria-label="GitHub"
             >
-              <i className="bi bi-linkedin" aria-hidden="true"></i>
+              <Github size={16} aria-hidden="true" />
             </a>
           </li>
           <li>
@@ -22,29 +24,27 @@ const Footer = () => {
               className="social-icon"
               aria-label="Twitter"
             >
-              <i className="bi bi-twitter" aria-hidden="true"></i>
+              <Twitter size={16} aria-hidden="true" />
             </a>
           </li>
           <li>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://medium.com/@ralexrivero"
+              href="https://www.linkedin.com/in/ronald-rivero/"
               className="social-icon"
-              aria-label="Medium"
+              aria-label="LinkedIn"
             >
-              <i className="bi bi-medium" aria-hidden="true"></i>
+              <Linkedin size={16} aria-hidden="true" />
             </a>
           </li>
           <li>
             <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/ralexrivero"
+              href="mailto:ralexrivero@gmail.com"
               className="social-icon"
-              aria-label="GitHub"
+              aria-label="Email"
             >
-              <i className="bi bi-github" aria-hidden="true"></i>
+              <Mail size={16} aria-hidden="true" />
             </a>
           </li>
         </ul>
