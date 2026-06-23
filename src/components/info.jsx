@@ -8,17 +8,13 @@ const Info = () => {
 
   return (
     <header>
-      {/* Capa superior: idioma, tema e imagen a pantalla completa */}
+      {/* Top layer: language, theme, and full-width profile image */}
       <div className="header-nav">
-        <Lang />
         <Theme />
+        <Lang />
 
-        {/*
-          width/height = fuentes de CLS,
-          pero style={{width:'100%'}} asegura que en CSS siga ocupando todo el contenedor.
-        */}
         <img
-          className="img-responsive profilePic"
+          className="profilePic"
           src={profilePic}
           alt={t('info.altProfilePhoto')}
           width="800"
@@ -28,32 +24,32 @@ const Info = () => {
         />
       </div>
 
-      {/* Datos personales */}
+      {/* Personal info */}
       <div className="header-body f-wcc">
         <h1>{t('info.name')}</h1>
         <h2 className="txt-c personal-title">{t('info.title')}</h2>
 
-        {/* Web personal */}
+        {/* Personal website */}
         <small>
           <a
             href="https://ralex.works/"
             target="_blank"
             rel="noopener noreferrer"
-            className="link link-website"
+            className="link-website"
             aria-label="Sitio web personal"
           >
             {t('info.website')}
           </a>
         </small>
 
-        {/* Botones de contacto */}
-        <div className="f-rsec info-btns" role="group" aria-label="Enlaces de contacto">
+        {/* Contact buttons */}
+        <div className="info-btns" role="group" aria-label="Enlaces de contacto">
           <a
             href="mailto:ralexrivero@gmail.com"
             className="info-btn btn-email"
             aria-label="Enviar correo electrónico"
           >
-            <i className="bi bi-envelope" aria-hidden="true" title="Email"></i>
+            <i className="bi bi-envelope" aria-hidden="true"></i>
             {t('info.email')}
           </a>
 
@@ -64,7 +60,7 @@ const Info = () => {
             rel="noopener noreferrer"
             aria-label="Perfil de LinkedIn"
           >
-            <i className="bi bi-linkedin" aria-hidden="true" title="LinkedIn"></i>
+            <i className="bi bi-linkedin" aria-hidden="true"></i>
             {t('info.linkedin')}
           </a>
 
@@ -75,7 +71,7 @@ const Info = () => {
             rel="noopener noreferrer"
             aria-label={t('info.whatsapp')}
           >
-            <i className="bi bi-whatsapp" aria-hidden="true" title="WhatsApp"></i>
+            <i className="bi bi-whatsapp" aria-hidden="true"></i>
           </a>
         </div>
       </div>
