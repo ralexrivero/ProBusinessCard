@@ -1,6 +1,45 @@
 /***********************************************************
-  General
+  Ralex Design System — ProBusinessCard
+  Matching ralex.works look & feel
 ***********************************************************/
+
+/* =========================================================
+   1. CSS Custom Properties (Design Tokens)
+   ========================================================= */
+:root {
+  /* Light Theme — clean, high-contrast, professional */
+  --background: 0 0% 99%;
+  --foreground: 220 15% 8%;
+  --text-primary: 220 15% 8%;
+  --text-secondary: 220 8% 42%;
+  --dark-panel: 220 14% 96%;
+  --panel-border: 220 12% 90%;
+  --border-gray: 220 12% 88%;
+  --lime-neon: 82 100% 46%;
+  --lime-neon-subtle: 82 80% 95%;
+  --surface-raised: 0 0% 100%;
+  --card-bg: 0 0% 100%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Dark Theme — deep black with precise lime accent */
+  --background: 220 18% 5%;
+  --foreground: 0 0% 96%;
+  --text-primary: 0 0% 95%;
+  --text-secondary: 0 0% 58%;
+  --dark-panel: 220 14% 9%;
+  --panel-border: 220 10% 14%;
+  --border-gray: 220 10% 16%;
+  --lime-neon: 82 100% 52%;
+  --lime-neon-subtle: 82 60% 10%;
+  --surface-raised: 220 14% 11%;
+  --card-bg: 220 18% 7%;
+}
+
+/* =========================================================
+   2. Base Reset & Globals
+   ========================================================= */
 *,
 *::after,
 *::before {
@@ -9,271 +48,578 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 16px;
+  background-color: hsl(var(--background));
+  color: hsl(var(--text-primary));
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   min-height: 100vh;
+  background-color: hsl(var(--background));
+  color: hsl(var(--text-primary));
+  font-feature-settings: "kern" 1, "liga" 1;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/***********************************************************
-  Theme Variables
-***********************************************************/
-:root {
-  --bg: #F5F5F5;
-  --fg: #333;
-  --section-bg: #EEEEEE;
-  --footer-bg: #E0E0E0;
-  --primary: #4a86d4;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  letter-spacing: -0.02em;
 }
 
-body[data-theme="light"] {
-  --bg: #F5F5F5;
-  --fg: #333;
-  --section-bg: #EEEEEE;
-  --footer-bg: #E0E0E0;
-  --primary: #4a86d4;
-}
-
-body[data-theme="dark"] {
-  --bg: #23252C;
-  --fg: #eee;
-  --section-bg: #1a1b21;
-  --footer-bg: #161619;
-  --primary: #f3bf99;
-}
-
-/***********************************************************
-  Apply Theme
-***********************************************************/
-body {
-  background-color: var(--bg);
-  color: var(--fg);
-}
-
-.header-body,
-.info-body,
-.interests-body {
-  background-color: var(--section-bg);
-}
-
-.footer-body {
-  background-color: var(--footer-bg);
-  border-radius: 0 0 .5rem .5rem;
-}
-
-.personal-title {
-  color: var(--primary);
-}
-
-.link-website {
-  color: var(--fg);
-}
-
-/***********************************************************
-  Common Styles
-***********************************************************/
-.img-responsive {
+img {
   max-width: 100%;
+  display: block;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================================
+   3. App Container & Card Layout
+   ========================================================= */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+/* Subtle grid texture background */
+.App::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image:
+    linear-gradient(hsl(var(--border-gray)) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border-gray)) 1px, transparent 1px);
+  background-size: 48px 48px;
+  z-index: 0;
+}
+
+.dark .App::before {
+  opacity: 0.04;
+}
+
+/* Lime glow accent — top-left corner */
+.App::after {
+  content: "";
+  position: fixed;
+  top: -10rem;
+  left: -10rem;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  background: hsl(var(--lime-neon));
+  opacity: 0.06;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.grd-col-1 {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 425px;
+  background: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--border-gray));
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px hsl(var(--border-gray) / 0.5),
+    0 4px 24px hsl(var(--background) / 0.3);
+  animation: cardFadeIn 0.7s ease-out;
+}
+
+/* =========================================================
+   4. Header — Navigation Bar (Theme + Lang)
+   ========================================================= */
+.header-nav {
+  position: relative;
+}
+
+/* Profile Image */
 .profilePic {
-  border-radius: .5rem .5rem 0 0;
-  margin-bottom: -0.25rem;
+  border-radius: 0;
+  margin-bottom: -4px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
 }
 
+/* Lime bottom accent strip on image */
+.header-nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: hsl(var(--lime-neon));
+  opacity: 0.8;
+  z-index: 2;
+}
+
+/* =========================================================
+   5. Header Body — Name, Title, Links
+   ========================================================= */
 .header-body {
-  padding-block: 1rem;
+  background-color: hsl(var(--card-bg));
+  padding: 1.5rem 1.25rem 1rem;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out 0.1s both;
 }
 
 .header-body > * {
   margin-block: 0.25rem;
 }
 
+.header-body h1 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: hsl(var(--text-primary));
+  line-height: 1.2;
+}
+
+.personal-title {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: hsl(var(--lime-neon)) !important;
+  margin-top: 0.25rem;
+}
+
+/* Website link */
+.link-website {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: hsl(var(--text-secondary));
+  transition: color 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.link-website:hover {
+  color: hsl(var(--lime-neon));
+  border-bottom-color: hsl(var(--lime-neon));
+}
+
+/* =========================================================
+   6. Contact Buttons
+   ========================================================= */
 .info-btns {
-  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-}
-
-.social-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin: 0 0.5rem;
-  color: #56535f;
-  transition: all 0.2s ease-in-out;
-}
-
-.social-icon:hover {
-  color: #373540;
+  gap: 0.625rem;
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+  animation: fadeInUp 0.6s ease-out 0.25s both;
 }
 
 .info-btn {
-  border: none;
-  border-radius: 0.25rem;
-  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: -0.01em;
+  border-radius: 0.375rem;
   cursor: pointer;
   text-decoration: none;
-  padding: .4rem .8rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 }
 
 .info-btn > i {
-  padding-right: .5rem;
+  padding-right: 0;
+  font-size: 0.875rem;
 }
 
+/* Email — primary style */
 .btn-email {
-  color: #555;
-  background-color: #eee;
-  border: 1px solid #555;
+  background: transparent;
+  color: hsl(var(--text-primary));
+  border: 1.5px solid hsl(var(--lime-neon));
 }
 
 .btn-email:link,
 .btn-email:visited {
-  color: #333;
-}
-
-.btn-email:focus {
-  border: 1px dotted #eee;
+  color: hsl(var(--text-primary));
 }
 
 .btn-email:hover {
-  color: #fafafa;
-  background-color: #555;
-  border: 1px solid #555;
+  background-color: hsl(var(--lime-neon));
+  color: hsl(var(--background));
+  border-color: hsl(var(--lime-neon));
 }
 
 .btn-email:active {
-  box-shadow: 1px 1px 4px #555;
+  box-shadow: 0 0 0 2px hsl(var(--lime-neon) / 0.3);
 }
 
+/* LinkedIn — secondary style */
 .btn-linkedin,
 .btn-linkedin:link {
-  color: #5093e2;
-  background-color: #eee;
-  border: 1px solid #5093e2;
+  background: transparent;
+  color: hsl(var(--text-secondary));
+  border: 1px solid hsl(var(--border-gray));
 }
 
 .btn-linkedin:hover {
-  color: #eee;
-  background-color: #5093e2;
+  border-color: hsl(var(--lime-neon));
+  color: hsl(var(--lime-neon));
+  background: transparent;
 }
 
 .btn-linkedin:active {
-  box-shadow: 1px 1px 4px #555;
+  box-shadow: 0 0 0 2px hsl(var(--lime-neon) / 0.2);
 }
 
+/* WhatsApp — icon-only accent */
 .btn-whatsapp {
-  font-size: 1.4rem;
-  color: #00E676;
+  font-size: 1.25rem;
+  color: hsl(var(--text-secondary));
+  background: transparent;
+  border: 1px solid hsl(var(--border-gray));
+  border-radius: 0.375rem;
+  padding: 0.4rem 0.6rem;
+  transition: all 0.2s ease;
 }
 
 .btn-whatsapp:hover {
-  color: #e1fbe8;
-  text-shadow: 1px 1px 4px #00c32b, 1px 1px 4px #555;
+  color: hsl(var(--lime-neon));
+  border-color: hsl(var(--lime-neon));
+  text-shadow: none;
 }
 
 .btn-whatsapp:active {
-  text-shadow: 1px 1px 4px #555;
+  box-shadow: 0 0 0 2px hsl(var(--lime-neon) / 0.2);
+}
+
+/* =========================================================
+   7. About Section
+   ========================================================= */
+.info-body {
+  background-color: hsl(var(--dark-panel));
+  border-top: 1px solid hsl(var(--border-gray));
+  border-bottom: 1px solid hsl(var(--border-gray));
+  padding: 1.5rem 1.25rem;
+  animation: fadeInUp 0.6s ease-out 0.35s both;
+}
+
+.info-body h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(var(--text-primary));
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Eyebrow label before the title */
+.info-body h2::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 2px;
+  background: hsl(var(--lime-neon));
+  flex-shrink: 0;
+}
+
+.info-body p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: hsl(var(--text-secondary));
+}
+
+/* =========================================================
+   8. Interests Section
+   ========================================================= */
+.interests-body {
+  background-color: hsl(var(--card-bg));
+  padding: 1.25rem;
+  animation: fadeInUp 0.6s ease-out 0.45s both;
+}
+
+.interests-body h3 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: hsl(var(--lime-neon));
+  margin-bottom: 0.75rem;
 }
 
 .insterest-items {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: start;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+/* Tech-tag pill style */
+.insterest-items > li {
+  display: inline-flex;
   align-items: center;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border-gray));
+  color: hsl(var(--text-secondary));
+  background: hsl(var(--dark-panel));
+  transition: all 0.15s ease;
+  cursor: default;
 }
 
 .insterest-items > li::after {
-  content: '.';
-  margin-right: .4rem;
+  content: none;
 }
 
-/*******************************************************************************************************
- * Lang and Theme Buttons
-*******************************************************************************************************/
-
-/* Contenedor de ambos botones */
-.header-nav {
-  position: relative;
+.insterest-items > li:hover {
+  border-color: hsl(var(--lime-neon));
+  color: hsl(var(--lime-neon));
+  background: hsl(var(--lime-neon-subtle));
 }
 
-/* ==========================
-   Lenguaje
-   ========================== */
+/* =========================================================
+   9. Footer
+   ========================================================= */
+.footer-body {
+  background-color: hsl(var(--dark-panel));
+  border-top: 1px solid hsl(var(--border-gray));
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem 1.25rem;
+  animation: fadeInUp 0.6s ease-out 0.55s both;
+}
+
+.footer-body nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  margin: 0;
+  font-size: 1.125rem;
+  color: hsl(var(--text-secondary));
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+  color: hsl(var(--lime-neon));
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   10. Language Buttons
+   ========================================================= */
 .lang {
   position: absolute;
   top: 0;
   right: 0;
-  margin: .5rem;
+  margin: 0.625rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
 }
 
-/* Ícono principal de cambio de idioma */
 .lang-main-btn {
   cursor: pointer;
-  font-size: 1rem;     /* Tamaño original */
-  color: #1A1B21;       /* Siempre mismo color */
+  font-size: 0.875rem;
+  color: hsl(var(--text-primary));
+  background: hsl(var(--surface-raised) / 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.375rem;
 }
 
-/* Botones dentro del menú de idioma */
+.lang-group {
+  display: flex;
+  gap: 0.25rem;
+}
+
 .lang-group .lang-btn {
-  border: 1px solid #1A1B21;
-  background-color: #fff; /* Inactivo: fondo claro */
-  color: #1A1B21;         /* Inactivo: texto oscuro */
-  border-radius: .25rem;
-  padding: .25rem;
-  margin-left: .25rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid hsl(var(--border-gray));
+  border-radius: 0.375rem;
+  background: hsl(var(--surface-raised) / 0.85);
+  backdrop-filter: blur(8px);
+  color: hsl(var(--text-secondary));
   cursor: pointer;
-  transition: background .2s, color .2s;
+  transition: all 0.2s ease;
 }
 
-/* Botón de idioma activo */
-.lang-group .lang-btn-active {
-  background-color: #1A1B21; /* Activo: fondo oscuro */
-  color: #fff;               /* Activo: texto claro */
-}
-
-/* Hover sobre botón de idioma */
 .lang-group .lang-btn:hover {
-  background-color: rgba(26, 27, 33, 0.1);
+  border-color: hsl(var(--lime-neon) / 0.5);
+  color: hsl(var(--text-primary));
+  background: hsl(var(--surface-raised) / 0.9);
 }
 
-/* ==========================
-   Tema
-   ========================== */
+.lang-group .lang-btn-active {
+  background: hsl(var(--lime-neon));
+  color: hsl(var(--background));
+  border-color: hsl(var(--lime-neon));
+}
+
+/* =========================================================
+   11. Theme Buttons
+   ========================================================= */
 .theme {
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 1rem;
+  margin: 0.625rem;
+  z-index: 10;
+  display: flex;
+  gap: 0.25rem;
 }
 
-/* Íconos de tema */
 .theme-btn {
-  font-size: .75rem;      /* Tamaño original */
-  padding: .25rem;
-  margin: .25rem;
-  border: 1px solid #1A1B21;
-  background-color: #fff; /* Inactivo: fondo claro */
-  color: #1A1B21;         /* Inactivo: ícono oscuro */
-  border-radius: .25rem;
+  font-size: 0.75rem;
+  padding: 0.3rem;
+  border: 1px solid hsl(var(--border-gray));
+  border-radius: 0.375rem;
+  background: hsl(var(--surface-raised) / 0.85);
+  backdrop-filter: blur(8px);
+  color: hsl(var(--text-secondary));
   cursor: pointer;
-  transition: background .2s, color .2s;
+  transition: all 0.2s ease;
+  line-height: 1;
 }
 
-/* Ícono de tema activo */
-.theme-btn-active {
-  background-color: #1A1B21; /* Activo: fondo oscuro */
-  color: #fff;               /* Activo: ícono claro */
-}
-
-/* Hover sobre ícono de tema */
 .theme-btn:hover {
-  background-color: rgba(26, 27, 33, 0.1);
+  border-color: hsl(var(--lime-neon) / 0.5);
+  color: hsl(var(--text-primary));
 }
 
-/* Estado presionado */
-.theme-btn:active {
-  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+.theme-btn-active {
+  background: hsl(var(--lime-neon));
+  color: hsl(var(--background));
+  border-color: hsl(var(--lime-neon));
+}
+
+/* =========================================================
+   12. Animations
+   ========================================================= */
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   13. Utility overrides (keep aquarius compat)
+   ========================================================= */
+.li-none {
+  list-style: none;
+}
+
+.f-wcc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.f-rsec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.txt-c {
+  text-align: center;
+}
+
+/* Override aquarius container for this app */
+.container.container-mb-s {
+  max-width: 100%;
+  padding: 0;
+}
+
+.pt-xs {
+  padding-top: 0;
+}
+
+/* Row utility */
+.row {
+  display: block;
+}
+
+/* Spacing utilities used in components */
+.pl-sm { padding-left: 1rem; }
+.pr-sm { padding-right: 1rem; }
+.pb-xs { padding-bottom: 0.5rem; }
+.pb-sm { padding-bottom: 1rem; }
+.p-sm { padding: 1rem; }
+.mb-sm { margin-bottom: 1rem; }
+
+/* =========================================================
+   14. Responsive
+   ========================================================= */
+@media (min-width: 480px) {
+  .App {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -14,12 +14,16 @@ const Lang = () => {
         <button
           onClick={switchToEn}
           className={`lang-btn ${current === 'en' ? 'lang-btn-active' : ''}`}
+          type="button"
+          aria-label="Switch to English"
         >
           EN
         </button>
         <button
           onClick={switchToEs}
           className={`lang-btn ${current === 'es' ? 'lang-btn-active' : ''}`}
+          type="button"
+          aria-label="Cambiar a Español"
         >
           ES
         </button>
