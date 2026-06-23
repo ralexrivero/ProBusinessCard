@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Sun, Moon } from 'lucide-react';
 
 const Theme = () => {
   const [theme, setTheme] = useState(() => {
@@ -32,7 +33,7 @@ const Theme = () => {
         aria-label="Activar modo claro"
         type="button"
       >
-        <i className="bi bi-brightness-high" aria-hidden="true"></i>
+        <Sun size={14} aria-hidden="true" />
       </button>
       <button
         onClick={setDark}
@@ -40,7 +41,7 @@ const Theme = () => {
         aria-label="Activar modo oscuro"
         type="button"
       >
-        <i className="bi bi-moon" aria-hidden="true"></i>
+        <Moon size={14} aria-hidden="true" />
       </button>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Languages, ChevronDown } from "lucide-react";
 
 const Lang = () => {
   const [t, i18n] = useTranslation("global");
@@ -30,7 +31,9 @@ const Lang = () => {
         aria-label="Cambiar idioma"
         aria-expanded={open}
       >
-        <i className="bi bi-translate" aria-hidden="true"></i>
+        <Languages size={14} aria-hidden="true" />
+        <span className="lang-code">{current.toUpperCase()}</span>
+        <ChevronDown size={12} className={`chevron-icon ${open ? 'rotate-180' : ''}`} />
       </button>
 
       {open && (
