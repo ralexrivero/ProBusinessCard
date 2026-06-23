@@ -12,8 +12,9 @@ const Theme = () => {
     return 'dark';
   });
 
-  const setLight = () => setTheme('light');
-  const setDark  = () => setTheme('dark');
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  };
 
   useEffect(() => {
     const root = document.documentElement;
@@ -28,20 +29,16 @@ const Theme = () => {
   return (
     <div className="theme">
       <button
-        onClick={setLight}
-        className={`theme-btn ${theme === 'light' ? 'theme-btn-active' : ''}`}
-        aria-label="Activar modo claro"
+        onClick={toggleTheme}
+        className="theme-btn"
+        aria-label={theme === 'light' ? 'Activar modo oscuro' : 'Activar modo claro'}
         type="button"
       >
-        <Sun size={14} aria-hidden="true" />
-      </button>
-      <button
-        onClick={setDark}
-        className={`theme-btn ${theme === 'dark' ? 'theme-btn-active' : ''}`}
-        aria-label="Activar modo oscuro"
-        type="button"
-      >
-        <Moon size={14} aria-hidden="true" />
+        {theme === 'light' ? (
+          <Moon size={14} aria-hidden="true" />
+        ) : (
+          <Sun size={14} aria-hidden="true" />
+        )}
       </button>
     </div>
   );
