@@ -2,7 +2,7 @@
   "info": {
     "altProfilePhoto": "Foto de Perfil",
     "name": "Ronald Rivero",
-    "title": "Desarrollador FullStack y Cloud Developer AWS - GenAI",
+    "title": "Desarrollador Full Stack & Cloud (AWS) | Especialista en DevSecOps, Compliance as Code e IA Agentic | Educador y Mentor STEM",
     "website": "ralex.works",
     "email": "Correo",
     "linkedin": "LinkedIn",
@@ -10,17 +10,17 @@
   },
   "about": {
     "title": "Sobre mí",
-    "description": "Soy desarrollador FullStack y Cloud Developer AWS, apasionado por Linux y el open source. Con Python, C y JavaScript, diseño APIs REST de alto rendimiento y SPAs/PWAs dinámicas. Mi avidez de conocimiento me impulsa a explorar tecnologías emergentes como la Generative AI, el Machine Learning y la computación cuántica. Como tutor de programación y placas, inspiro a las nuevas generaciones a aplicar la tecnología con fundamentos éticos y una visión orientada a maximizar su impacto positivo en la sociedad."
+    "description": "Soy Desarrollador Full Stack y DevSecOps (AWS Certified Developer) y mi mayor diferencial es combinar una sólida ejecución técnica en la nube con más de 15 años de experiencia estratégica en Sistemas de Gestión de Calidad (QMS). Me especializo en diseñar infraestructuras seguras y escalables bajo el paradigma de *Compliance as Code*, orquestar arquitecturas de datos a gran escala e integrar Inteligencia Artificial en flujos corporativos críticos. Paralelamente a mi rol técnico, ejerzo como educador y mentor STEM; a lo largo de mi carrera he formado a más de 5.000 estudiantes en programas como Ceibal y Jóvenes a Programar, impulsando la inserción tecnológica de las nuevas generaciones y fomentando equipos con una visión ética y orientada al impacto positivo."
   },
   "interests": {
     "title": "Intereses",
     "list": [
-      "IA Generativa",
-      "Desarrollo Cloud",
-      "Desarrollo Web",
-      "Investigación en IA",
-      "Enseñanza",
-      "Python"
+      "DevSecOps",
+      "Compliance as Code (CaC)",
+      "Agentic AI & Modelos Multimodales",
+      "Desarrollo Cloud AWS",
+      "Mentoría STEM",
+      "Ingeniería de Datos & Python"
     ]
   }
 }
